@@ -22,7 +22,7 @@
             android:id="@+id/nickNameTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="본인 닉네임 표시"
+            android:text="본인 닉네임 표시"
             />
 
         <TextView

@@ -49,6 +49,7 @@
         android:orientation="horizontal" >
 
         <EditText
+            android:id="@+id/telEdt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="상대방 번호를 입력"
@@ -56,6 +57,7 @@
             android:layout_weight="1"/>
 
         <Button
+            android:id="@+id/telBtn"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="연결"  />
@@ -73,6 +75,7 @@
         android:orientation="horizontal" >
 
         <EditText
+            android:id="@+id/smsEdt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="문자로 보낼 내용"
@@ -80,6 +83,7 @@
             android:layout_weight="1"/>
 
         <Button
+            android:id="@+id/smsBtn"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="문자전송"/>

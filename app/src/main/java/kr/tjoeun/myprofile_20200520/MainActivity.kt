@@ -2,6 +2,7 @@ package kr.tjoeun.myprofile_20200520
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,6 +20,25 @@ class MainActivity : AppCompatActivity() {
 
             startActivityForResult(myIntent ,REQ_FOR_NICKNAME )
 
+        }
+
+        telBtn.setOnClickListener {
+
+            val phoneNum = telEdt.text.toString().replace("-","")
+
+            val myUri = Uri.parse("tel:${phoneNum}")
+            val myIntent = Intent(Intent.ACTION_DIAL , myUri)
+            startActivity(myIntent)
+
+        }
+
+        smsBtn.setOnClickListener {
+
+            val myUri = Uri.parse("sms:${telEdt.text.toString()}")
+            val myIntent = Intent(Intent.ACTION_SENDTO , myUri)
+            myIntent.putExtra("sms_body" , smsEdt.text.toString() )
+
+            startActivity(myIntent)
         }
 
     }
